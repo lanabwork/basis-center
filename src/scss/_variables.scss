@@ -1,0 +1,26 @@
+// FONTS
+$Montserrat: 'Montserrat', sans-serif;
+
+// BASE
+$base-transition: 0.3s;
+$transition-duration: 0.3s;
+$ease: 0.3s ease;
+
+// COLORS
+$black: #000;
+$white: #fff;
+$lemon: #ffeaa7;
+$light-green-blue: #55efc4;
+$lights-grey: #dfe6e9;
+$dark-grey: #2d3436;
+$red: #e17055;
+$blue: #74b9ff;
+
+// BASE COLORS
+$defaultTaskColor: $lemon;
+$completedTaskColor: $light-green-blue;
+$borderColor: $dark-grey;
+$buttonTextColor: $dark-grey;
+$buttonBorderColor: $dark-grey;
+$defaultLabelColor: $blue;
+$importantLabelColor: $red;

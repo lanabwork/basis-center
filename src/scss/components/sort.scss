@@ -1,0 +1,50 @@
+.sort {
+  font-size: 16px;
+  transition: opacity $base-transition;
+
+  @include hover(true) {
+    opacity: .7;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+
+    &:checked {
+      & + label {
+        &::after {
+          background-color: $borderColor
+        }
+      }
+    }
+
+    & + label {
+      padding-left: 32px;
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        border: 1px solid $borderColor;
+        background-color: transparent;
+        width: 24px;
+        height: 24px;
+        transition: $base-transition;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: "";
+        width: 9px;
+        height: 9px;
+        transition: $base-transition;
+        position: absolute;
+        left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

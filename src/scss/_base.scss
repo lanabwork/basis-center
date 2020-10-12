@@ -1,0 +1,74 @@
+@import './_reset.scss';
+@import 'components/sort';
+@import 'components/search';
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  font-family: $Montserrat;
+}
+
+#app {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.container {
+  padding: rem(16);
+  width: 100%;
+
+  @include breakpoint(sm) {
+    margin: 0 auto;
+    width: rem(640);
+  }
+
+  @include breakpoint(md) {
+    width: rem(915);
+  }
+
+  @include breakpoint(lg) {
+    width: rem(1040);
+  }
+
+  @include breakpoint(xl) {
+    width: rem(1500);
+  }
+}
+
+button,
+.button {
+  background-color: transparent;
+  border: 1px solid $buttonBorderColor;
+  border-radius: 4px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  color: $buttonTextColor;
+  font-weight: bold;
+  transition: opacity $base-transition;
+
+  @include hover(true) {
+    opacity: .7;
+  }
+}
+
+input[type='text'] {
+  border-radius: 4px;
+  border: 1px solid $borderColor;
+  padding: 16px;
+  font-size: 16px;
+}
+

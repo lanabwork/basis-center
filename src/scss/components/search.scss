@@ -1,0 +1,19 @@
+.search {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(lg) {
+    flex-direction: row;
+  }
+
+  &__field {
+    width: 100%;
+    margin-bottom: 16px;
+
+    @include breakpoint(lg) {
+      margin-right: 16px;
+      margin-bottom: 0;
+      width: 400px;
+    }
+  }
+}

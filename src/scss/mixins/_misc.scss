@@ -1,0 +1,17 @@
+@function rem($size) {
+  $rem: $size / 16;
+
+  @return #{$rem}rem;
+}
+
+@mixin hover($pointer: false) {
+  @media (hover: hover) {
+    @if ($pointer) {
+      cursor: pointer;
+    }
+
+    &:hover {
+      @content;
+    }
+  }
+}
